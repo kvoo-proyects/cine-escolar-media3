@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Asiento G2</title>
 <style>
-    body {
-        background-color: #5C0A0A;
-        color: white;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    h1 {
-        font-size: 3em;
-        margin: 0;
-    }
-    h2 {
-        font-size: 1.5em;
-        margin: 5px 0;
-        color: #D4A017;
-    }
-    h3 {
-        font-size: 2em;
-        margin: 20px 0 10px 0;
-    }
-    p {
-        font-size: 1.5em;
-        margin: 5px 0;
-    }
+  :root{--bg:#5C0A0A; --screen:#333; --seat-red:#d32f2f; --seat-green:#2ecc71; --white:#fff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;display:flex;justify-content:center;}
+  .wrap{width:100%;max-width:900px;padding:28px;min-height:100vh;display:flex;flex-direction:column;align-items:center;}
+  header{text-align:center; margin-top:6px;}
+  h1{font-weight:900;font-size:56px;margin:0;text-transform:lowercase;}
+  .curso{color:#D4A017;margin-top:6px;}
+  .pelicula{font-weight:800;font-size:34px;margin:22px 0 10px;width:90%;text-align:left;line-height:0.95}
+  .info{font-size:20px;margin:6px 0;}
+  .map-wrap{width:100%;display:flex;flex-direction:column;align-items:center;margin-top:18px;}
+  .screen{width:84%;max-width:720px;background:var(--screen);color:var(--white);padding:10px;border-radius:6px;text-align:center;font-weight:700;margin-bottom:18px;}
+  .seats{display:grid;grid-template-columns: repeat(8, 1fr);gap:12px;max-width:720px;width:84%;justify-items:center;}
+  .seat{width:64px;height:44px;border-radius:8px;background:var(--seat-red);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--white);box-shadow:0 3px 0 rgba(0,0,0,0.25);}
+  .seat.selected{background:var(--seat-green);color:#07130a;}
+  @media (max-width:480px){
+    h1{font-size:40px}
+    .pelicula{font-size:22px}
+    .seat{width:44px;height:34px;font-size:12px}
+  }
 </style>
 </head>
 <body>
-    <h1>Cine Escolar</h1>
-    <h2>5to 1ra</h2>
-    <h3>Película: Happy Gilmore 2</h3>
-    <p>🎟 Asiento: G2</p>
-    <p>💰 Entrada: $1000</p>
+  <div class="wrap">
+    <header>
+      <h1>Cine Escolar</h1>
+      <div class="curso">5to 1ra</div>
+      <div class="pelicula">pelicula:<br>Happy Gilmore 2</div>
+    </header>
+    <div class="info">🎟 <strong style="font-size:22px">G2</strong></div>
+    <div class="info">💰 Entrada: $1000</div>
+
+    <div class="map-wrap" role="img" aria-label="Mapa de asientos. Asiento G2 seleccionado.">
+      <div class="screen">SCREEN</div>
+      <div class="seats">
+        <div class='seat' title='A1'>A1</div>
+<div class='seat' title='B1'>B1</div>
+<div class='seat' title='C1'>C1</div>
+<div class='seat' title='D1'>D1</div>
+<div class='seat' title='E1'>E1</div>
+<div class='seat' title='F1'>F1</div>
+<div class='seat' title='G1'>G1</div>
+<div class='seat' title='H1'>H1</div>
+<div class='seat' title='A2'>A2</div>
+<div class='seat' title='B2'>B2</div>
+<div class='seat' title='C2'>C2</div>
+<div class='seat' title='D2'>D2</div>
+<div class='seat' title='E2'>E2</div>
+<div class='seat' title='F2'>F2</div>
+<div class='seat selected' title='G2'>G2</div>
+<div class='seat' title='H2'>H2</div>
+<div class='seat' title='A3'>A3</div>
+<div class='seat' title='B3'>B3</div>
+<div class='seat' title='C3'>C3</div>
+<div class='seat' title='D3'>D3</div>
+<div class='seat' title='E3'>E3</div>
+<div class='seat' title='F3'>F3</div>
+<div class='seat' title='G3'>G3</div>
+<div class='seat' title='H3'>H3</div>
+<div class='seat' title='A4'>A4</div>
+<div class='seat' title='B4'>B4</div>
+<div class='seat' title='C4'>C4</div>
+<div class='seat' title='D4'>D4</div>
+<div class='seat' title='E4'>E4</div>
+<div class='seat' title='F4'>F4</div>
+<div class='seat' title='G4'>G4</div>
+<div class='seat' title='H4'>H4</div>
+<div class='seat' title='A5'>A5</div>
+<div class='seat' title='B5'>B5</div>
+<div class='seat' title='C5'>C5</div>
+<div class='seat' title='D5'>D5</div>
+<div class='seat' title='E5'>E5</div>
+<div class='seat' title='F5'>F5</div>
+<div class='seat' title='G5'>G5</div>
+<div class='seat' title='H5'>H5</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
